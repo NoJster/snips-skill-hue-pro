@@ -101,7 +101,7 @@ class Skill_Hue:
         ## all the intents have a house_room slot, extract here
         rooms = self.extract_house_rooms(intent_message)
         intent = intent_message.intent.intent_name
-        print("[HUE] Received in " + rooms + " with intent " + intent)
+        print("[HUE] Received in " + str(rooms) + " with intent " + intent)
         if 'turnOn' in intent:
             self.queue.put(self.turn_on(hermes, intent_message, rooms))
         if 'turnOff' in intent:
